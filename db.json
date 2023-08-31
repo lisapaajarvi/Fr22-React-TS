@@ -1,0 +1,22 @@
+{
+  "guineapigs": [
+    {
+      "id": 123,
+      "name": "Tristan",
+      "age": 7,
+      "likes": "morötter"
+    },
+    {
+      "name": "Ruben",
+      "age": 3,
+      "likes": "paprika",
+      "id": 1693400120372
+    },
+    {
+      "name": "Orfeus",
+      "age": 5,
+      "likes": "ärtplättar och gos",
+      "id": 1693503609292
+    }
+  ]
+}
