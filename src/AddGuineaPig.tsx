@@ -5,7 +5,7 @@ interface Props {
   addNewGuineapig: (guineapig: Guineapig) => void;
 }
 
-export default function AddGuineaPig(props: Props) {
+export default function AddGuineaPig({ addNewGuineapig }: Props) {
   const [guineaPigName, setGuineaPigName] = useState("");
   const [guineaPigAge, setGuineaPigAge] = useState("");
   const [guineaPigLikes, setGuineaPigLikes] = useState("");
@@ -19,7 +19,7 @@ export default function AddGuineaPig(props: Props) {
       likes: guineaPigLikes,
       id: Date.now(),
     };
-    props.addNewGuineapig(newPig);
+    addNewGuineapig(newPig);
     setGuineaPigName("");
     setGuineaPigAge("");
     setGuineaPigLikes("");
