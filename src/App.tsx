@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import AddGuineaPig from "./AddGuineaPig";
 import ShowGuineaPigs from "./ShowGuineaPigs";
+import Header from "./Header";
 
 export interface Guineapig {
   id: number;
@@ -44,10 +45,20 @@ function App() {
   };
 
   return (
-    <div style={{ display: "flex", gap: "3rem" }}>
-      <AddGuineaPig addNewGuineapig={addNewGuineaPig} />
-      <ShowGuineaPigs guineapigs={guineapigs} />
-    </div>
+    <>
+      <Header />
+      <div
+        style={{
+          display: "flex",
+          gap: "3rem",
+          justifyContent: "space-around",
+          margin: "3rem",
+        }}
+      >
+        <AddGuineaPig addNewGuineapig={addNewGuineaPig} />
+        <ShowGuineaPigs guineapigs={guineapigs} />
+      </div>
+    </>
   );
 }
 
