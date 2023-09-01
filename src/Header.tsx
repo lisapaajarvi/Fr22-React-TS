@@ -1,5 +1,6 @@
 export default function Header() {
   return (
+    //stylingexempel med objektvariabel
     <header style={headerStyle}>
       <h1>Marsvinsboken</h1>
     </header>

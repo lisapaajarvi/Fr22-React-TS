@@ -48,6 +48,7 @@ function App() {
   return (
     <>
       <Header />
+      {/* Stylingexempel med styled component (importeras från styles.tsx) */}
       <MainContainer>
         <AddGuineaPig addNewGuineapig={addNewGuineaPig} />
         <ShowGuineaPigs guineapigs={guineapigs} />

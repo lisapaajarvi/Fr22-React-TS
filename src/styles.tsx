@@ -6,6 +6,7 @@ export const MainContainer = styled.div`
   justify-content: space-around;
   padding: 3rem;
   background-color: lightblue;
+  height: calc(100vh - 6rem);
 `;
 
 export const Heading2 = styled.h2`
