@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Guineapig } from "./App";
+import { Heading2 } from "./styles";
 
 interface Props {
   addNewGuineapig: (guineapig: Guineapig) => void;
@@ -28,7 +29,7 @@ export default function AddGuineaPig({ addNewGuineapig }: Props) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h2>Lägg till marsvin här:</h2>
+        <Heading2>Lägg till marsvin här:</Heading2>
         <div>
           <h4>Marsvinets namn:</h4>
           <input

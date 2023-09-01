@@ -3,6 +3,7 @@ import "./App.css";
 import AddGuineaPig from "./AddGuineaPig";
 import ShowGuineaPigs from "./ShowGuineaPigs";
 import Header from "./Header";
+import { MainContainer } from "./styles";
 
 export interface Guineapig {
   id: number;
@@ -47,17 +48,10 @@ function App() {
   return (
     <>
       <Header />
-      <div
-        style={{
-          display: "flex",
-          gap: "3rem",
-          justifyContent: "space-around",
-          margin: "3rem",
-        }}
-      >
+      <MainContainer>
         <AddGuineaPig addNewGuineapig={addNewGuineaPig} />
         <ShowGuineaPigs guineapigs={guineapigs} />
-      </div>
+      </MainContainer>
     </>
   );
 }
