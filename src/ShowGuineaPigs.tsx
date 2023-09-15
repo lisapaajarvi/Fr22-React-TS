@@ -12,7 +12,7 @@ export default function ShowGuineaPigs(props: Props) {
       <Heading2>Här visas marsvin:</Heading2>
       <ol>
         {props.guineapigs.map((gp) => (
-          <GuineaPigCard guineapig={gp} />
+          <GuineaPigCard guineapig={gp} key={gp.id} />
         ))}
       </ol>
     </div>

@@ -4,6 +4,7 @@ import AddGuineaPig from "./AddGuineaPig";
 import ShowGuineaPigs from "./ShowGuineaPigs";
 import Header from "./Header";
 import { MainContainer } from "./styles";
+import ErrorBoundary from "./ErrorBoundary";
 
 export interface Guineapig {
   id: number;
@@ -16,13 +17,14 @@ function App() {
   const [guineapigs, setGuineapigs] = useState<Guineapig[]>([]);
 
   const getGuineapigs = () => {
-    fetch("http://localhost:3000/guineapigs")
+    fetch("http://localhost:3000/guineapigssss")
       .then((res) => res.json())
       .then((data: Guineapig[]) => {
         setGuineapigs(data);
       })
       .catch((error) => {
         console.log(error);
+        throw new Error("Kan inte hämta marsvin");
       });
   };
 
@@ -51,7 +53,9 @@ function App() {
       {/* Stylingexempel med styled component (importeras från styles.tsx) */}
       <MainContainer>
         <AddGuineaPig addNewGuineapig={addNewGuineaPig} />
-        <ShowGuineaPigs guineapigs={guineapigs} />
+        <ErrorBoundary>
+          <ShowGuineaPigs guineapigs={guineapigs} />
+        </ErrorBoundary>
       </MainContainer>
     </>
   );
